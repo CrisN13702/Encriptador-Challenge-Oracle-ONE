@@ -435,3 +435,103 @@ main {
     order: 0;
     flex-grow: 1;
 }
+
+@media screen and (max-width: 768px) {
+    header{
+        /* Group 3 */
+
+        position: absolute;
+        width: 31.09px;
+        height: 50.58px;
+        left: 40px;
+        top: 73.42px;
+    }
+
+    header img {
+        /* Vector */
+
+        position: absolute;
+        left: 5.21%;
+        right: 90.74%;
+        top: 6.25%;
+        bottom: 89.8%;
+    }
+
+    .input-texto {
+        position: absolute;
+        width: 688px;
+        height: 500px;
+        left: 40px;
+        top: 240px;
+    }
+
+    .restriccion {
+        position: absolute;
+        width: 229px;
+        height: 18px;
+        left: 40px;
+        top: 836px;
+    }
+
+    .botones {
+        position: absolute;
+        width: 688px;
+        height: 67px;
+        left: 40px;
+        top: 870px;
+    }
+
+    .encriptar {
+        width: 332px;
+        height: 67px;
+        flex-grow: 1;
+    }
+
+    .desencriptar {
+        width: 332px;
+        height: 67px;
+        flex-grow: 1;
+    }
+
+    .caja-resultado {
+        /* Frame 5 */
+
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 32px;
+
+        position: absolute;
+        width: 688px;
+        height: 133px;
+        left: 40px;
+        top: 1001px;
+    }
+
+    .caja-resultado img {
+        display: none;
+    }
+
+    .no-mensaje {
+        width: 624px;
+        height: 29px;
+        left: 32px;
+        top: 32px;
+    }
+
+    .ingrese-mensaje {
+        width: 624px;
+        height: 24px;
+        left: 32px;
+        top: 77px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    
+}
