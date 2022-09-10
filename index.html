@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo de alura con la inicial de la letra a">
+    </header>
+    <main>
+        <section>
+            <textarea class="input-texto" cols="40" rows="6" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="restriccion">
+                <img class="img-admiracion" src="img/simboloAdmiracion.png" alt="simbolo de admiración">
+                <p>Solo letras minúsculas y sin acentos</p>    
+            </div>
+
+            <div class="botones">
+                <button class="encriptar" onclick="btnEncriptar()">
+                    <p>Encriptar</p>
+                </button>
+                <button class="desencriptar" onclick="btnDesencriptar()">
+                    <p>Desencriptar</p>
+                </button>
+            </div>
+        </section>
+        <section class="caja-resultado">
+            <textarea class="mensaje" cols="18" rows="8"></textarea>
+            <img src="img/Muñeco.png" alt="muñeco">
+            <p class="no-mensaje">Ningún mensaje fue<br>encontrado</p>
+            <p class="ingrese-mensaje">Ingresa el texto que desees encriptar o<br>desencriptar</p>
+            <button class="copiar" onclick="copiar()">
+                <p>Copiar</p>
+            </button>
+        </section>
+    </main>
+</body>
+</html>
