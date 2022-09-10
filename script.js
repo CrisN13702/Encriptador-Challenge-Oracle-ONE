@@ -1,24 +1,37 @@
-const inputTexto = document.querySelector(".input-texto");
-const mensaje = document.querySelector(".mensaje");
+let inputTexto = document.getElementsByClassName("input-texto");
+let mensaje = document.getElementsByClassName("mensaje");
 
 const btnEncriptar = () => {
-    const textoEncriptado = encriptar(inputTexto.value);
-    mensaje.value = textoEncriptado;
-    mensaje.getElementsByClassName.backgroundImage = "none";
-    inputTexto.value = "";
+    const textoEncriptado = encriptar(inputTexto[0].value);
+    
+    mensaje[0].style.display = "inline"
+    mensaje[0].value = textoEncriptado;
+    document.getElementById("muneco").style.display = "none";
+    document.getElementsByClassName("no-mensaje")[0].style.display = "none";
+    document.getElementsByClassName("ingrese-mensaje")[0].style.display = "none";
+    document.getElementsByClassName("copiar")[0].style.display = "inline";
+
+    inputTexto[0].value = "";
 }
 
 const btnDesencriptar = () => {
-    const textoEncriptado = desencriptar(inputTexto.value);
-    mensaje.value = textoEncriptado;
-    inputTexto.value = "";
+    const textoEncriptado = desencriptar(inputTexto[0].value);
+
+    mensaje[0].style.display = "inline"
+    mensaje[0].value = textoEncriptado;
+    document.getElementById("muneco").style.display = "none";
+    document.getElementsByClassName("no-mensaje")[0].style.display = "none";
+    document.getElementsByClassName("ingrese-mensaje")[0].style.display = "none";
+    document.getElementsByClassName("copiar")[0].style.display = "inline";
+
+    inputTexto[0].value = "";
 }
 
 const encriptar = (stringEncriptada) => {
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     stringEncriptada = stringEncriptada.toLowerCase();
 
-    for (let i = 0; matrizCodigo.length; i++) {
+    for (let i = 0; i < matrizCodigo.length; i++) {
         if (stringEncriptada.includes(matrizCodigo[i][0])) {
             stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
         }
@@ -31,7 +44,7 @@ const desencriptar = (stringDesencriptada) => {
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     stringDesencriptada = stringDesencriptada.toLowerCase();
 
-    for (let i = 0; matrizCodigo.length; i++) {
+    for (let i = 0; i < matrizCodigo.length; i++) {
         if (stringDesencriptada.includes(matrizCodigo[i][0])) {
             stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
         }
@@ -41,8 +54,8 @@ const desencriptar = (stringDesencriptada) => {
 }
 
 const copiar = () => {
-    mensaje.select();
-    navigator.clipboard.writeText(mensaje.value);
-    mensaje.value = "";
-    alert("Texto copiado");
+    let contenido = document.querySelector(".mensaje");
+    contenido.select();
+    navigator.clipboard.writeText(contenido.value);
+    contenido.value = "";
 }
